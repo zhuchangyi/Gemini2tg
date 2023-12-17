@@ -5,7 +5,7 @@ sudo apt-get update
 sudo apt-get install python3.9
 python3.9 -m venv gemini2tg
 source gemini2tg/bin/activate
-GITHUB_REPO_URL="https://github.com/zhuchangyi/Gemini2tg/blob/main"
+GITHUB_REPO_URL="https://raw.githubusercontent.com/zhuchangyi/Gemini2tg/main"
 REQUIREMENTS_FILE="requirements.txt"
 PYTHON_SCRIPT="script.py"
 wget "$GITHUB_REPO_URL/$REQUIREMENTS_FILE" || curl -O "$GITHUB_REPO_URL/$REQUIREMENTS_FILE"
