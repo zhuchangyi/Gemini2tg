@@ -4,7 +4,7 @@ In English
 
 Gemini2TG is a project that deploys Google Gemini's API to a Telegram bot, giving you your own AI bot.  
 1. This script integrates Google Gemini Pro and Google Gemini Pro Vision, eliminating the need for manual switching.  
-2. When entering text, it uses Google Gemini Pro, and for image plus text input, it uses Gemini Pro Vision.  
+2. When entering text, it uses Google Gemini Pro, and for image with text, it uses Gemini Pro Vision.  
 3. Additionally, Google Gemini Pro supports contextual understanding.
 
 ## Obtaining Google API Key
