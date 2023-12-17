@@ -20,7 +20,6 @@ Gemini2TG 是一个将Google Gemini的API部署到Telegram机器人的项目，�
 
 我用的系统是Ubuntu
 ```#bash
-一键运行脚本
 wget -O gemini2tg.sh https://raw.githubusercontent.com/zhuchangyi/Gemini2tg/main/gemini2tg.sh && chmod +x gemini2tg.sh && ./gemini2tg.sh 
 ```
 脚本会自动配置python环境，过程中会要求用户输入2个apikey，脚本运行成功后就与自己的bot聊天啦。
