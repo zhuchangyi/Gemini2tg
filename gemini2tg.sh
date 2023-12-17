@@ -3,7 +3,7 @@ mkdir gemini
 cd gemini/
 sudo apt-get update
 sudo apt-get install python3.9
-apt install python3.9-venv
+sudo apt install python3.9-venv
 python3.9 -m venv gemini2tg
 source gemini2tg/bin/activate
 pip install python-telegram-bot==13.13
