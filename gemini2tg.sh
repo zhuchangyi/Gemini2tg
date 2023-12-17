@@ -3,7 +3,7 @@ sudo apt-get upgrade -y
 sudo apt-get update -y
 mkdir gemini
 cd gemini/
-echo | sudo add-apt-repository ppa:deadsnakes/ppa
+sudo add-apt-repository -y ppa:deadsnakes/ppa
 sudo apt-get install python3.9
 sudo apt install python3.9-venv
 python3.9 -m venv gemini2tg
