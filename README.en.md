@@ -7,7 +7,7 @@ Gemini2TG is a project that deploys Google Gemini's API to a Telegram bot, givin
 2. When entering text, it uses Google Gemini Pro, and for image with text, it uses Gemini Pro Vision.  
 3. Additionally, Google Gemini Pro supports contextual understanding.
 
-## Obtaining Google API Key
+## Obtaining API Key
 
 Before you start using Gemini2TG, you need to obtain a Google API key.
 
