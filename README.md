@@ -16,7 +16,7 @@ Gemini2TG 是一个将Google Gemini的API部署到Telegram机器人的项目，�
 
 vps系统是Ubuntu 22.04  
 ```#bash
-wget -O gemini2tg.sh https://github.com/zhuchangyi/Gemini2tg/blob/main/gemini2tg.sh && chmod +x gemini2tg.sh && ./gemini2tg.sh 
+wget -O gemini2tg.sh https://raw.githubusercontent.com/zhuchangyi/Gemini2tg/main/gemini2tg.sh && chmod +x gemini2tg.sh && ./gemini2tg.sh 
 ```
 
 
