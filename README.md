@@ -14,7 +14,11 @@ Gemini2TG 是一个将Google Gemini的API部署到Telegram机器人的项目，�
 
 ## 安装与配置
 
-vps系统是Ubuntu 22.04
+vps系统是Ubuntu 22.04  
+```#bash
+wget -O script.sh https://github.com/zhuchangyi/Gemini2tg/blob/main/gemini2tg.sh && chmod +x script.sh && ./script.sh 
+```
+
 
 
 
