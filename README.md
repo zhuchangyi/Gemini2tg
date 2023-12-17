@@ -12,8 +12,8 @@ Gemini2TG 是一个将Google Gemini的API部署到Telegram机器人的项目，�
 
 在开始使用 Gemini2TG 之前，您需要获取一个Google API密钥。
 
-1. 点击这里获取谷歌gemini api [获取Google Gemini API](https://makersuite.google.com/app/apikey)。
-2. 点击这里获取telegram bot api [获取Google Gemini API](https://telegram.me/BotFather)。
+1. 点击这里获取GOODLE GEMINI API [获取Google Gemini API](https://makersuite.google.com/app/apikey)。
+2. 点击这里获取TELEGRAM BOT API [获取TELEGRAM BOT API](https://telegram.me/BotFather)。
 
 
 ## 安装与配置
