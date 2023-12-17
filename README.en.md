@@ -1,4 +1,4 @@
-[中文版说明](README.md)
+[中文版说明](README.md)  
 In English
 # Gemini2TG
 
