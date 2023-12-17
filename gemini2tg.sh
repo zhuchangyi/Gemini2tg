@@ -3,8 +3,10 @@ mkdir gemini
 cd gemini/
 sudo apt-get update
 sudo apt-get install python3.9
+apt install python3.9-venv
 python3.9 -m venv gemini2tg
 source gemini2tg/bin/activate
+pip install python-telegram-bot==13.13
 GITHUB_REPO_URL="https://raw.githubusercontent.com/zhuchangyi/Gemini2tg/main"
 REQUIREMENTS_FILE="requirements.txt"
 PYTHON_SCRIPT="script.py"
@@ -14,7 +16,6 @@ if [ -f "$REQUIREMENTS_FILE" ]; then
 else
     echo "Failed to solve environments"
 fi
-pip install python-telegram-bot==13.13
 echo "Finish environment installing"
 read -p "Enter your Google API Key: " GOOGLE_API_KEY
 read -p "Enter your Telegram API Key: " TELEGRAM_API_KEY
