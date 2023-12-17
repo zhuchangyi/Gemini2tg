@@ -37,4 +37,4 @@ else
     echo "Failed to download the Python script."
 fi
 chmod +x script.py
-nohup ./script.py 
+nohup python3.9 script.py &
