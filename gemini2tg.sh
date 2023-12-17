@@ -7,6 +7,7 @@ sudo apt install python3.9-venv
 python3.9 -m venv gemini2tg
 source gemini2tg/bin/activate
 pip install python-telegram-bot==13.13
+pip install Pillow
 GITHUB_REPO_URL="https://raw.githubusercontent.com/zhuchangyi/Gemini2tg/main"
 REQUIREMENTS_FILE="requirements.txt"
 PYTHON_SCRIPT="script.py"
