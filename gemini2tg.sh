@@ -4,8 +4,8 @@ sudo apt-get update -y
 mkdir gemini
 cd gemini/
 sudo add-apt-repository -y ppa:deadsnakes/ppa
-sudo apt-get install python3.9
-sudo apt install python3.9-venv
+sudo apt-get install python3.9 -y
+sudo apt install python3.9-venv -y
 python3.9 -m venv gemini2tg
 source gemini2tg/bin/activate
 pip install python-telegram-bot==13.13
