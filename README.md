@@ -1,3 +1,4 @@
+[English version](README.en.md)
 # Gemini2TG
 
 Gemini2TG 是一个将Google Gemini的API部署到Telegram机器人的项目，让你拥有属于自己的ai机器人。  
