@@ -9,7 +9,7 @@ Gemini2TG 是一个将Google Gemini的API部署到Telegram机器人的项目，�
 
 
 
-## 获取Google API密钥
+## 获取API密钥
 
 在开始使用 Gemini2TG 之前，您需要获取一个Google API密钥。
 
