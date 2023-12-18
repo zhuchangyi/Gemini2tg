@@ -1,5 +1,4 @@
 #!/bin/bash
-sudo apt-get upgrade -y
 sudo apt-get update -y
 mkdir gemini
 cd gemini/
