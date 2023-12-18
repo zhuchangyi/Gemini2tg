@@ -1,8 +1,6 @@
 cachetools==4.2.2
 certifi==2023.11.17
 charset-normalizer==3.3.2
-grpcio==1.60.0
-grpcio-status==1.60.0
 idna==3.6
 proto-plus==1.23.0
 protobuf==4.25.1
