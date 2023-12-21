@@ -6,7 +6,7 @@ Gemini2TG is a project that deploys Google Gemini's API to a Telegram bot, givin
 1. This script integrates Google Gemini Pro and Google Gemini Pro Vision, eliminating the need for manual switching.  
 2. When entering text, it uses Google Gemini Pro, and for image with text, it uses Gemini Pro Vision.  
 3. Additionally, Google Gemini Pro supports contextual understanding.
-4. You can start a new chat when sending /start to your bot
+4. You can start a new chat when sending "/start" to your bot
 
 ## Obtaining API Key
 
