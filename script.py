@@ -24,7 +24,6 @@ if google_api_key is None or telegram_api_key is None:
 os.environ["GOOGLE_API_KEY"] = google_api_key
 os.environ["TELEGRAM_API_KEY"] = telegram_api_key
 
-# 设置日志
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 logger = logging.getLogger(__name__)
 google_api_key=os.getenv('GOOGLE_API_KEY')
@@ -32,11 +31,20 @@ genai.configure(api_key=google_api_key)
 model = genai.GenerativeModel('gemini-pro')
 #modelone = genai.GenerativeModel('gemini-pro-vision')
 
-chat = model.start_chat(history=[])
+#chat = model.start_chat(history=[])
+global chat
+    
 def start(update, context):
+    global chat
     update.message.reply_text("Hello! I am your chatbot. Send me a message to start.")
+    chat = model.start_chat(history=[])
 def handle_message(update: Update, context: CallbackContext):
     user_message = update.message.text
+    global chat
+    if chat is None:
+        chat = model.start_chat(history=[])
+    else:
+        print(chat.history)
     response = chat.send_message(user_message)
     response_text = response.text if hasattr(response, 'text') else "Sorry, I couldn't process your request."
 
@@ -66,6 +74,11 @@ def main():
     dp.add_handler(MessageHandler(Filters.photo, handle_photo))
     # Add handler for text messages
 
+    updater.start_polling()
+    updater.idle()
+
+if __name__ == '__main__':
+    main()
     updater.start_polling()
     updater.idle()
 
