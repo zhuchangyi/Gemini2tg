@@ -1,11 +1,29 @@
 #!/bin/bash
-sudo add-apt-repository -y ppa:deadsnakes/ppa
+REPO_URL="https://github.com/zhuchangyi/Gemini2tg.git"
+SCRIPT_NAME="script.py"
+
 sudo apt-get update -y
+sudo apt-get install git -y
+
+git clone $REPO_URL
+REPO_DIR=$(basename $REPO_URL .git)
+cd $REPO_DIR
+
+
+LOG_FILE="./gemini2tg_install.log"
+
+log() {
+    echo "$(date '+%Y-%m-%d %H:%M:%S') - $@" | tee -a "$LOG_FILE"
+}
+
+
+sudo add-apt-repository -y ppa:deadsnakes/ppa
+
 sudo apt-get install python3 -y
-current_python_version=$(python3 -c 'import platform; print(platform.python_version())')
+current_python_version=$(python3 -c 'import platform; print(platform.python_version())') 
 required_python_version="3.9"
-mkdir -p gemini
-cd gemini/
+
+
 
 if [[ $(printf '%s\n' "$required_python_version" "$current_python_version" | sort -V | head -n1) != "$required_python_version" ]]; then
     echo "current_python_version ($current_python_version) less than ($required_python_version)install python3.9"
@@ -19,17 +37,20 @@ else
 fi
 
 
+log "Checking Python version without environment..."
+python -V 2>&1 | tee -a "$LOG_FILE"
 
 source gemini2tg/bin/activate
 
+log "Checking Python version within environment..."
+python -V 2>&1 | tee -a "$LOG_FILE"
 
 pip install python-telegram-bot==13.13
 pip install Pillow
 pip install -q -U google-generativeai
-GITHUB_REPO_URL="https://raw.githubusercontent.com/zhuchangyi/Gemini2tg/main"
 REQUIREMENTS_FILE="requirements.txt"
 PYTHON_SCRIPT="script.py"
-wget "$GITHUB_REPO_URL/$REQUIREMENTS_FILE" || curl -O "$GITHUB_REPO_URL/$REQUIREMENTS_FILE"
+
 if [ -f "$REQUIREMENTS_FILE" ]; then
     pip install -r "$REQUIREMENTS_FILE"
 else
@@ -45,7 +66,11 @@ cat <<EOF >config.json
 }
 EOF
 echo "Configurations saved to config.json"
-wget "$GITHUB_REPO_URL/$PYTHON_SCRIPT" || curl -O "$GITHUB_REPO_URL/$PYTHON_SCRIPT"
+
+log "Checking installed pip packages..."
+pip list 2>&1 | tee -a "$LOG_FILE"
+
+
 if [ -f "script.py" ]; then
     echo "Python script downloaded successfully."
 else
