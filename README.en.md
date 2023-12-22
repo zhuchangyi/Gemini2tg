@@ -19,7 +19,18 @@ Before you start using Gemini2TG, you need to obtain a Google API key.
 
 I am using Ubuntu
 ```#bash
-wget -O gemini2tg.sh https://raw.githubusercontent.com/zhuchangyi/Gemini2tg/main/gemini2tg.sh && chmod +x gemini2tg.sh && ./gemini2tg.sh
+wget -O gemini2tg.sh https://raw.githubusercontent.com/zhuchangyi/Gemini2tg/main/gemini2tg.sh && chmod +x gemini2tg.sh && ./gemini2tg.sh 
+```
+## To stop running the script  
+```#bash
+SCRIPT_NAME="script.py"
+PID=$(ps aux | grep $SCRIPT_NAME | grep -v "grep" | awk '{print $2}')
+if [ -z "$PID" ]; then
+    echo "Process not found."
+else
+    echo "Killing process with PID: $PID"
+    sudo kill $PID
+fi
 ```
 ## Samples
 ![text test](https://github.com/zhuchangyi/Gemini2tg/blob/main/test.png "test")
