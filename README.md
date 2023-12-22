@@ -24,7 +24,18 @@ Gemini2TG 是一个将Google Gemini的API部署到Telegram机器人的项目，�
 ```#bash
 wget -O gemini2tg.sh https://raw.githubusercontent.com/zhuchangyi/Gemini2tg/main/gemini2tg.sh && chmod +x gemini2tg.sh && ./gemini2tg.sh 
 ```
-脚本会自动配置python环境，过程中会要求用户输入2个apikey，脚本运行成功后就与自己的bot聊天啦。
+脚本会自动配置python环境，过程中会要求用户输入2个apikey，脚本运行成功后就与自己的bot聊天啦。  
+## 关闭后台运行  
+```#bash
+SCRIPT_NAME="script.py"
+PID=$(ps aux | grep $SCRIPT_NAME | grep -v "grep" | awk '{print $2}')
+if [ -z "$PID" ]; then
+    echo "Process not found."
+else
+    echo "Killing process with PID: $PID"
+    sudo kill $PID
+fi
+```
 ## samples  
 ![text test](https://github.com/zhuchangyi/Gemini2tg/blob/main/test.png "test")
 ![vison test](https://github.com/zhuchangyi/Gemini2tg/blob/main/vision_test.png "vison_test")
