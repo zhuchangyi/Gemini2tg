@@ -77,6 +77,5 @@ else
     echo "Failed to download the Python script."
 fi
 chmod +x script.py
-nohup python3.9 script.py &
 nohup python3 script.py &
 echo "Gemini2tg is running in the background."
