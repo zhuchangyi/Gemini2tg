@@ -1,4 +1,3 @@
-#!/root/gemini/gemini2tg/bin/python
 import pathlib
 import textwrap
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
