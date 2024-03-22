@@ -24,7 +24,8 @@ wget -O Dockerfile https://raw.githubusercontent.com/zhuchangyi/Gemini2tg/main/D
 ```#bash
 docker build -t gemini2tg .
 docker run -v "$(pwd)/config.json:/app/config.json" gemini2tg
-### on system
+```
+### On system
 I am using Ubuntu
 ```#bash
 wget -O gemini2tg.sh https://raw.githubusercontent.com/zhuchangyi/Gemini2tg/main/gemini2tg.sh && chmod +x gemini2tg.sh && ./gemini2tg.sh 
