@@ -22,6 +22,10 @@ Gemini2TG 是一个将Google Gemini的API部署到Telegram机器人的项目，�
 ### Docker 
 ```#bash
 wget -O setup.sh https://raw.githubusercontent.com/zhuchangyi/Gemini2tg/main/setup.sh && chmod +x setup.sh && ./setup.sh
+wget -O Dockerfile https://raw.githubusercontent.com/zhuchangyi/Gemini2tg/main/Dockerfile
+docker build -t Gemini2tg .
+
+docker run -v "$(pwd)/config.json:/app/config.json" Gemini2tg
 ```
 ### 直接安装
 我用的系统是Ubuntu
