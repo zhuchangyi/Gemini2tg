@@ -15,8 +15,16 @@ Before you start using Gemini2TG, you need to obtain a Google API key.
 1. Click here to get the Google Gemini API [Get Google Gemini API](https://makersuite.google.com/app/apikey).
 2. Click here to get the Telegram bot API [Get Telegram bot API](https://telegram.me/BotFather).
 
-## Installation and Configuration
-
+## Installation and Configuration 
+### Docker 
+```#bash
+wget -O setup.sh https://raw.githubusercontent.com/zhuchangyi/Gemini2tg/main/setup.sh && chmod +x setup.sh && ./setup.sh
+wget -O Dockerfile https://raw.githubusercontent.com/zhuchangyi/Gemini2tg/main/Dockerfile
+```
+```#bash
+docker build -t gemini2tg .
+docker run -v "$(pwd)/config.json:/app/config.json" gemini2tg
+### on system
 I am using Ubuntu
 ```#bash
 wget -O gemini2tg.sh https://raw.githubusercontent.com/zhuchangyi/Gemini2tg/main/gemini2tg.sh && chmod +x gemini2tg.sh && ./gemini2tg.sh 
