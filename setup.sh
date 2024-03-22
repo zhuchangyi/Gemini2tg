@@ -1,5 +1,10 @@
 #!/bin/bash
-read -p "Enter your Google API Key: " google_api_key
-read -p "Enter your Telegram API Key: " telegram_api_key
-echo "{\"GOOGLE_API_KEY\": \"$google_api_key\", \"TELEGRAM_API_KEY\": \"$telegram_api_key\"}" > config.json
-echo "config.json file has been created."
+read -p "Enter your Google API Key: " GOOGLE_API_KEY
+read -p "Enter your Telegram API Key: " TELEGRAM_API_KEY
+cat <<EOF >config.json
+{
+    "GOOGLE_API_KEY": "$GOOGLE_API_KEY",
+    "TELEGRAM_API_KEY": "$TELEGRAM_API_KEY"
+}
+EOF
+echo "Configurations saved to config.json"
