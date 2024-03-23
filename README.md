@@ -1,5 +1,4 @@
 [中文版说明](README.cn.md)  
-In English
 # Gemini2TG
 
 Gemini2TG is a project that deploys Google Gemini's API to a Telegram bot, giving you your own AI bot.  
