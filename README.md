@@ -40,6 +40,7 @@ else
     sudo kill $PID
 fi
 ```
-## Samples
-![text test](https://github.com/zhuchangyi/Gemini2tg/blob/main/test.png "test")
+## Samples 
 ![vison test](https://github.com/zhuchangyi/Gemini2tg/blob/main/vision_test.png "vison_test")
+![text test](https://github.com/zhuchangyi/Gemini2tg/blob/main/test.png "test")
+
