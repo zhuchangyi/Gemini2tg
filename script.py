@@ -20,8 +20,8 @@ with open("config.json") as config_file:
 if google_api_key is None or telegram_api_key is None:
     raise ValueError("One or all API keys are not found in config file.")
 
-os.environ["GOOGLE_API_KEY"] = google_api_key
-os.environ["TELEGRAM_API_KEY"] = telegram_api_key
+os.environ["AIzaSyBy8S4UihMeg5ZpahO4ijb7cl8zIqZizss"] = google_api_key
+os.environ["7283773155:AAEs7nM3NRWXlaRDRP1TYW7hB7ZJjEWWhQk"] = telegram_api_key
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 logger = logging.getLogger(__name__)
