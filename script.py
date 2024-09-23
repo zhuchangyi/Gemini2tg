@@ -40,14 +40,18 @@ def start(update, context):
 def handle_message(update: Update, context: CallbackContext):
     user_message = update.message.text
     global chat
+    
     if chat is None:
         chat = model.start_chat(history=[])
     else:
         print(chat.history)
+    
     response = chat.send_message(user_message)
     response_text = response.text if hasattr(response, 'text') else "Sorry, I couldn't process your request."
 
-    update.message.reply_text(response_text)
+    # 发送消息，确保使用 Markdown 格式
+    update.message.reply_text(response_text, parse_mode='Markdown')
+
 def handle_photo(update: Update, context: CallbackContext):
     photo = update.message.photo[-1]
     file = context.bot.get_file(photo.file_id)
@@ -55,14 +59,12 @@ def handle_photo(update: Update, context: CallbackContext):
     img = PIL.Image.open('photo.jpg')
 
     user_message = update.message.caption or "What's in the picture? Watch carefully and describe all details."
-
     vision_model = genai.GenerativeModel('gemini-pro-vision')
-
     response = vision_model.generate_content([user_message, img], stream=False)
     response.resolve()
 
-    # Send response back to user
-    update.message.reply_text(textwrap.indent(response.text, '> '))
+    # 发送消息，确保使用 Markdown 格式
+    update.message.reply_text(response.text, parse_mode='Markdown')
 def main():
     TOKEN = os.getenv("TELEGRAM_API_KEY")
     updater = Updater(TOKEN, use_context=True)
