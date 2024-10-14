@@ -49,6 +49,10 @@ fi
 ![text test](https://github.com/zhuchangyi/Gemini2tg/blob/main/test.png "test")
 ![vison test](https://github.com/zhuchangyi/Gemini2tg/blob/main/vision_test.png "vison_test")
 
+## Todo
+- [ ] 增加历史对话选项
+- [ ] 新增模型选择框
+
 
 
 
